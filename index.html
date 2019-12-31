@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Discount calculator</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Discount Calculator</h1>
+    </header>
+    <main class="container">
+        <div class="card">
+            <h2 class="card__title card__title--color-purple">? % off the total</h2>
+            <input type="number" class="card__input" id="purple-input-1" placeholder="Discount percentage">
+            <input type="number" class="card__input" id="purple-input-2" placeholder="Unit's price">
+            <input type="number" class="card__input card__input--hidden">
+            <div class="card__results-container">
+                <div id="purple-results-success-toggle">
+                    <h3 class="card__results">You pay <strong class="card__results--strong" id="purple-pay"></strong></h3>
+                    <h3 class="card__results">And save <strong class="card__results--strong" id="purple-save"></strong></h3>
+                </div>
+                <div id="purple-results-error-toggle">
+                    <h3 class="card__results">Please input a valid value.</h3>
+                </div>
+            </div>
+            <button class="card__btn card__btn--color-purple" id="purple-calculate-btn">Calculate</button>
+        </div>
+        <div class="card">
+            <h2 class="card__title card__title--color-cyan">? % off ? ° unit</h2>
+            <input type="number" class="card__input" id="cyan-input-1" placeholder="Discount percentage">
+            <input type="number" class="card__input" id="cyan-input-2" placeholder="Amount of units">
+            <input type="number" class="card__input" id="cyan-input-3" placeholder="Units' price">
+            <div class="card__results-container">
+                <div id="cyan-results-success-toggle">
+                    <h3 class="card__results">You pay <strong class="card__results--strong" id="cyan-pay"></strong></h3>
+                    <h3 class="card__results">And save <strong class="card__results--strong" id="cyan-save"></strong></h3>
+                </div>
+                <div id="cyan-results-error-toggle">
+                    <h3 class="card__results">Please input a valid value.</h3>
+                </div>
+            </div>
+            <button class="card__btn card__btn--color-cyan" id="cyan-calculate-btn">Calculate</button>
+        </div>
+        <div class="card">
+            <h2 class="card__title card__title--color-coral">buy ? get ? free</h2>
+            <input type="number" class="card__input" id="coral-input-1" placeholder="Amount of units">
+            <input type="number" class="card__input" id="coral-input-2" placeholder="Amount of free units">
+            <input type="number" class="card__input" id="coral-input-3" placeholder="Unit's price">
+            <div class="card__results-container">
+                <div id="coral-results-success-toggle">
+                    <h3 class="card__results">You pay <strong class="card__results--strong" id="coral-pay"></strong></h3>
+                    <h3 class="card__results">And save <strong class="card__results--strong" id="coral-save"></strong></h3>
+                </div>
+                <div id="coral-results-error-toggle">
+                    <h3 class="card__results">Please input a valid value.</h3>
+                </div>
+            </div>
+            <button class="card__btn card__btn--color-coral" id="coral-calculate-btn">Calculate</button>
+        </div>
+    </main>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

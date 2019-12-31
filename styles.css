@@ -1,0 +1,393 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #221F2E;
+}
+
+.header {
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media only screen and (min-width: 568px) {
+  .header {
+    height: 28vh;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    height: 15vh;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header {
+    height: 20vh;
+  }
+}
+
+.header__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  background: -webkit-gradient(linear, left top, right top, from(#ea30ff), color-stop(#02fcdb), color-stop(#ff7f6c), to(#ea30ff));
+  background: linear-gradient(to right, #ea30ff, #02fcdb, #ff7f6c, #ea30ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  -webkit-animation-name: gradient;
+          animation-name: gradient;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes gradient {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes gradient {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 85vh;
+  padding: 0 14%;
+}
+
+@media only screen and (min-width: 568px) {
+  .container {
+    min-height: 72vh;
+    padding: 0 25%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    min-height: 85vh;
+    padding: 0 30%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 5%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    min-height: 80vh;
+  }
+}
+
+.card {
+  background: #2E2B3F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  padding: 8%;
+  margin-bottom: 25%;
+}
+
+@media only screen and (min-width: 568px) {
+  .card {
+    padding: 6%;
+    margin-bottom: 20%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .card {
+    padding: 2%;
+    margin-bottom: 5%;
+    width: 30%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card {
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .card {
+    height: auto;
+  }
+}
+
+.card__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  .card__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 3.2rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .card__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 3.8rem;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .card__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 4.5rem;
+  }
+}
+
+.card__title--color-purple {
+  color: #ea30ff;
+}
+
+.card__title--color-cyan {
+  color: #02fcdb;
+}
+
+.card__title--color-coral {
+  color: #ff7f6c;
+}
+
+.card__input {
+  background-color: #F9F8FA;
+  width: 90%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding: 4%;
+  margin-top: 7%;
+  border: none;
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 568px) {
+  .card__input {
+    width: 80%;
+    padding: 3%;
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card__input {
+    padding: 4%;
+    margin-top: 7%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card__input {
+    margin-top: 5%;
+  }
+}
+
+.card__input--hidden {
+  visibility: hidden;
+}
+
+.card__btn {
+  all: unset;
+  color: #F9F8FA;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  width: 80%;
+  border: none;
+  border-radius: 100px;
+  padding: 4%;
+  margin: 0 0 4% 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+@media only screen and (min-width: 568px) {
+  .card__btn {
+    width: 70%;
+  }
+}
+
+.card__btn--color-purple {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ea30ff), to(#5c1aa8));
+  background-image: linear-gradient(to bottom, #ea30ff, #5c1aa8);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.card__btn--color-purple:hover {
+  -webkit-box-shadow: 0 0 20px #111111;
+          box-shadow: 0 0 20px #111111;
+}
+
+.card__btn--color-cyan {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#02fcdb), to(#109af0));
+  background-image: linear-gradient(to bottom, #02fcdb, #109af0);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.card__btn--color-cyan:hover {
+  -webkit-box-shadow: 0 0 20px #111111;
+          box-shadow: 0 0 20px #111111;
+}
+
+.card__btn--color-coral {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff7f6c), to(#ef3994));
+  background-image: linear-gradient(to bottom, #ff7f6c, #ef3994);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.card__btn--color-coral:hover {
+  -webkit-box-shadow: 0 0 20px #111111;
+          box-shadow: 0 0 20px #111111;
+}
+
+.card__results-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #2E2B3F;
+  margin: 8% 0;
+  min-height: 60px;
+}
+
+.card__results {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #F9F8FA;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .card__results {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+}
+
+.card__results--strong {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .card__results--strong {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#purple-results-success-toggle, #cyan-results-success-toggle, #coral-results-success-toggle, #purple-results-error-toggle, #cyan-results-error-toggle, #coral-results-error-toggle {
+  display: none;
+  max-height: 60px;
+}
+/*# sourceMappingURL=styles.css.map */

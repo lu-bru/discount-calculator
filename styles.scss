@@ -1,0 +1,236 @@
+$primaryGray: #221F2E;
+$secondaryGray: #2E2B3F;
+$white: #F9F8FA;
+$purple1: rgba(234, 48, 255, 1);
+$purple2: rgba(92, 26, 168, 1);
+$cyan1: rgba(2, 252, 219, 1);
+$cyan2: rgba(16, 154, 240, 1);
+$coral1: rgba(255, 127, 108, 1);
+$coral2: rgba(239, 57, 148, 1);
+
+@mixin raleway($weight, $size){
+    font-family: 'Raleway', sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+@mixin flexCenter($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: $primaryGray;
+}
+
+.header {
+    height: 15vh;
+    @include flexCenter(row);
+    @media only screen and (min-width: 568px) {
+        height: 28vh;
+    }
+    @media only screen and (min-width: 768px) {
+        height: 15vh;
+    }
+    @media only screen and (min-width: 1200px) {
+        height: 20vh;
+    }
+    &__title {
+        @include raleway(700, 1.6rem);      
+        background: linear-gradient(to right, $purple1, $cyan1, $coral1, $purple1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200%;
+        animation-name: gradient;
+        animation-duration: 8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        @keyframes gradient {
+            to {
+                background-position: 200% center;
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            @include raleway(700, 1.8rem);
+        }
+        @media only screen and (min-width: 1200px) {
+            @include raleway(700, 2rem);
+        }
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 85vh;
+    padding: 0 14%;
+    @media only screen and (min-width: 568px) {
+        min-height: 72vh;
+        padding: 0 25%;
+    }
+    @media only screen and (min-width: 768px) {
+        min-height: 85vh;
+        padding: 0 30%;
+    }
+    @media only screen and (min-width: 992px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;        
+    }
+    @media only screen and (min-width: 1200px) {
+        min-height: 80vh;
+    }
+}
+
+.card {
+    background: $secondaryGray;
+    @include flexCenter(column);
+    border-radius: 5px;
+    padding: 8%;
+    margin-bottom: 25%;
+    @media only screen and (min-width: 568px) {
+        padding: 6%;
+        margin-bottom: 20%;
+    }
+    @media only screen and (min-width: 992px) {
+        padding: 2%;
+        margin-bottom: 5%;
+        width: 30%;
+        height: auto;
+    }
+    @media only screen and (min-width: 1200px) {
+        height: auto;
+    }
+    @media only screen and (min-width: 1900px) {
+        height: auto;
+    }
+    &__title {
+        @include raleway(900, 2.4rem);
+        text-transform: uppercase;
+        text-align: center;
+        @media only screen and (min-width: 1200px) {
+            @include raleway(900, 3.2rem);
+        }
+        @media only screen and (min-width: 1600px) {
+            @include raleway(900, 3.8rem);
+        }
+        @media only screen and (min-width: 1900px) {
+            @include raleway(900, 4.5rem);
+        }
+        &--color-purple {
+            color: $purple1;
+        }
+        &--color-cyan {
+            color: $cyan1;
+        }
+        &--color-coral {
+            color: $coral1;
+        }
+    }
+    &__input {
+        background-color: $white;
+        width: 90%;
+        @include raleway(400, 0.9rem);
+        padding: 4%;
+        margin-top: 7%;
+        border: none;
+        border-radius: 5px;
+        @media only screen and (min-width: 568px) {
+            width: 80%;
+            padding: 3%;
+            margin-top: 5%;
+        }
+        @media only screen and (min-width: 768px) {
+            padding: 4%;
+            margin-top: 7%;
+        }
+        @media only screen and (min-width: 1200px) {
+            margin-top: 5%;
+        }
+        &--hidden {
+            visibility: hidden;
+        }
+    }
+    &__btn {
+        all: unset;
+        color: $white;
+        @include raleway(400, 1rem);
+        text-align: center;
+        width: 80%;
+        border: none;
+        border-radius: 100px;
+        padding: 4%;
+        margin: 0 0 4% 0;
+        cursor: pointer;
+        -webkit-appearance: none;
+        @media only screen and (min-width: 568px) {
+            width: 70%;
+        }
+        &--color-purple{
+            background-image: linear-gradient(to bottom, $purple1, $purple2);
+            transition: all .2s ease-in-out;
+            &:hover {
+                box-shadow: 0 0 20px rgb(17, 17, 17);
+            }
+        }
+        &--color-cyan{
+            background-image: linear-gradient(to bottom, $cyan1, $cyan2);
+            transition: all .2s ease-in-out;
+            &:hover {
+                box-shadow: 0 0 20px rgb(17, 17, 17);
+            }
+        }
+        &--color-coral{
+            background-image: linear-gradient(to bottom, $coral1, $coral2);
+            transition: all .2s ease-in-out;
+            &:hover {
+                box-shadow: 0 0 20px rgb(17, 17, 17);
+            }
+        }
+    }
+    &__results-container {
+        @include flexCenter(column);
+        background-color: $secondaryGray;
+        margin: 8% 0;
+        min-height: 60px;
+    }
+    &__results {
+        @include raleway(500, 0.9rem);
+        color: $white;
+        text-transform: uppercase;
+        text-align: center;
+        @media only screen and (min-width: 768px) {
+            @include raleway(500, 1.1rem);
+        }
+        &--strong {
+            @include raleway(700, 1.3rem);
+            @media only screen and (min-width: 768px) {
+                @include raleway(700, 1.5rem);
+            }
+        }
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+#purple-results-success-toggle, #cyan-results-success-toggle, #coral-results-success-toggle, #purple-results-error-toggle, #cyan-results-error-toggle, #coral-results-error-toggle {
+    display: none;
+    max-height: 60px;
+}
